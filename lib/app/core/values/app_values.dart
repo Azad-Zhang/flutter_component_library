@@ -7,7 +7,39 @@ abstract class AppValues {
 
   static bool isDomestic = true; // 表明是否国内
 
-  
+  /**
+   * 1.容器
+   * 2.文字
+   * 3.列表
+   * 4.网格
+   * 5.手势
+   */
+  static List<String> typeList = [
+    "容器组件",
+    "文字组件",
+    "列表组件",
+    "网格组件",
+    "手势监听器"
+  ];
+
+  /**
+   * 1.无态
+   * 2.有态
+   * 3.单渲
+   * 4.多渲
+   * 5.滑片
+   * 6.代理
+   * 7.其他
+   */
+  static List<String> stateList = [
+    "无态",
+    "有态",
+    "单渲",
+    "多渲",
+    "滑片",
+    "代理",
+    "其他"
+  ];
 
 
 

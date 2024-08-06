@@ -15,8 +15,27 @@ abstract class AppColors {
   //error
   static const Color errorTextColor = Color(0XFFE74C4C);
 
+  //home
+  static const Color homeBgColor = Color(0XFFFAFAFA);
+
+  static const Color Color333 = Color(0XFF333333);
+  static const Color Color444 = Color(0XFF444444);
+  static const Color Color666 = Color(0XFF666666);
+  static const Color Color999 = Color(0XFF999999);
+
+  
+  static const Color lightBlue = Color(0XFF1B6BFF);
 
 
+  //pie chat
+  static const Color normalColor = Color(0XFF3AC055);
+  static const Color mildColor = Color(0XFFFFD058);
+  static const Color moderateColor = Color(0XFFC293FF);
+
+  static const Color minuentColor = Color(0XFFF24242);
+
+  //currency
+  static const Color greyBgColor = Color(0XFFEEEEEE);
 
   // static const Color pageBackground = Color(0xFFFAFBFD);
   static const Color pageBackground = Color(0xFFFFFFFF);
@@ -25,13 +44,12 @@ abstract class AppColors {
   static const Color appBarIconColor = Color(0xFF000000);
   static const Color appBarTextColor = Color(0xFF000000);
 
-  
-
   static const Color centerTextColor = Colors.grey;
   static const MaterialColor colorPrimarySwatch = Colors.cyan;
 
   static const Color colorPrimary = Color(0xFF2196F3);
-  
+
+
   static const Color colorAccent = Color(0xFF38686A);
   static const Color colorLightGreen = Color(0xFF00EFA7);
   static const Color colorWhite = Color(0xFFFFFFFF);

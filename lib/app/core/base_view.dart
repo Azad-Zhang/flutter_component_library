@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_component_library/app/core/base_controller.dart';
 import 'package:flutter_component_library/app/core/values/app_colors.dart';
 import 'package:flutter_component_library/app/core/widget/loading.dart';
+import 'package:flutter_component_library/app/services/screenAdapter.dart';
 
 
 import 'package:get/get.dart';
@@ -16,6 +17,16 @@ import '/flavors/build_config.dart';
 abstract class BaseView<Controller extends BaseController>
     extends GetView<Controller> {
   final GlobalKey<ScaffoldState> globalKey = GlobalKey<ScaffoldState>();
+
+  final List<double> parentPaddings;
+  final Color bgColor;
+  final Widget? banner;
+
+  BaseView(
+      {super.key,
+      required this.parentPaddings,
+      required this.bgColor,
+      this.banner});
 
 
 
@@ -44,7 +55,8 @@ abstract class BaseView<Controller extends BaseController>
         Obx(() => controller.errorMessage.isNotEmpty
             ? showErrorSnackBar(controller.errorMessage)
             : Container()),
-        Container(),
+        // 其他组件
+        if (banner != null) banner!, // 检查 banner 是否为 null，然后添加到 children 列表中
       ],
     );
     // )
@@ -87,9 +99,14 @@ abstract class BaseView<Controller extends BaseController>
   Widget pageContent(BuildContext context) {
     //SafeArea 是 Flutter 提供的一个组件，用于确保其子组件在不受设备状态栏、底部导航栏和其他系统UI元素干扰的安全区域内显示。它会自动适应设备，并确保内容不会被遮挡。
     return SafeArea(
-
+        child: Container(
+      width: ScreenAdapter.width(375),
+      height: ScreenAdapter.height(812),
+      padding: EdgeInsets.fromLTRB(parentPaddings[0], parentPaddings[1],
+          parentPaddings[2], parentPaddings[3]),
+      color: bgColor,
       child: body(context),
-    );
+    ));
     // return body(context);
   }
 

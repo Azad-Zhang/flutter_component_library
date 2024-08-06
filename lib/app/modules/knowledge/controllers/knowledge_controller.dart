@@ -1,7 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_component_library/app/core/render/inset_box_shadow/lib/box_shadow.dart';
+import 'package:flutter_component_library/app/services/screenAdapter.dart';
 import 'package:get/get.dart';
 
+
+
 class KnowledgeController extends GetxController {
-  //TODO: Implement KnowledgeController
 
   final count = 0.obs;
   @override
